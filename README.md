@@ -1,2 +1,2 @@
 # Coffee-Machine-Project
-For a coffee machine.
+Coffee machine.
