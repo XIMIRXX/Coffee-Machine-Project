@@ -45,13 +45,14 @@ def money_insert():
     pennies = int(input("How many pennies?"))
     us_money = quarters * quarter + dimes * dime + nickles * nickel + pennies * penny
 def calculate_money():
-    global us_money, user_ask
+    global us_money, user_ask, profit
     if us_money < choice["cost"]:
         print("There is not enough money. Money refunded.")
     else:
         if us_money > choice["cost"]:
             print(f'Here is your change: ${us_money - choice["cost"]:.2f}')
         print(f"Here is your {user_ask} ☕️. Enjoy!")
+        profit += choice["cost"]
 def calculate_resources():
     global resources, user_ask
     for item in choice["ingredients"]:
