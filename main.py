@@ -49,7 +49,8 @@ def calculate_money():
     if us_money < choice["cost"]:
         print("There is not enough money. Money refunded.")
     else:
-        print(f'Here is your change: {us_money - choice["cost"]:.2f}')
+        if us_money > choice["cost"]:
+            print(f'Here is your change: ${us_money - choice["cost"]:.2f}')
         print(f"Here is your {user_ask} ☕️. Enjoy!")
 def calculate_resources():
     global resources, user_ask
